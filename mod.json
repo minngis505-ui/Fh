@@ -1,0 +1,38 @@
+{
+	"geode": "4.6.0",
+	"gd": {
+		"android": "2.2081",
+		"win": "2.2081",
+		"mac": "2.2081"
+	},
+	"id": "hesperia.dinamico-frame",
+	"name": "Dinamico Frame Hesperia (FH)",
+	"version": "v1.0.0",
+	"developer": "Hesperia",
+	"description": "Corrige clics dados pocos frames antes de lo correcto para que no mueras.",
+	"resources": {
+		"sprites": [
+			"*.png"
+		]
+	},
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Activar mod",
+			"description": "Activa o desactiva la correccion de clics.",
+			"default": true
+		},
+		"frames": {
+			"type": "int",
+			"name": "Frames de correccion",
+			"description": "Cuantos frames (pasos de fisica) antes puede estar tu clic y aun asi ser corregido (2 a 16).",
+			"default": 6,
+			"min": 2,
+			"max": 16,
+			"control": {
+				"slider": true,
+				"input": true
+			}
+		}
+	}
+}
