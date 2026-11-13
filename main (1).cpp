@@ -1,1 +1,0 @@
-// Dinamico Frame Hesperia (FH)}
