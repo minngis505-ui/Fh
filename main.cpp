@@ -132,9 +132,9 @@ struct $modify(FHBase, GJBaseGameLayer) {
         GJBaseGameLayer::handleButton(down, button, p1);
     }
 
-    void processCommands(float dt) {
+    void processCommands(float dt, bool isHalfTick, bool isLastTick) {
         if (!this->fhActive()) {
-            return GJBaseGameLayer::processCommands(dt);
+            return GJBaseGameLayer::processCommands(dt, isHalfTick, isLastTick);
         }
 
         auto& s = fh::S();
@@ -149,7 +149,7 @@ struct $modify(FHBase, GJBaseGameLayer) {
             }
         }
 
-        GJBaseGameLayer::processCommands(dt);
+        GJBaseGameLayer::processCommands(dt, isHalfTick, isLastTick);
         s.step++;
 
         // Rebobinar si en este paso se evito una muerte
